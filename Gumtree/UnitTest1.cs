@@ -33,7 +33,6 @@ namespace Gumtree
             var maxPrice = listings.MaxPrice.GetAttribute("value");
             Assert.AreEqual(maxPrice, max, "Maximum price should be set to 25000");
 
-
             listings.SortBy();
             listings.SelectListing();
 

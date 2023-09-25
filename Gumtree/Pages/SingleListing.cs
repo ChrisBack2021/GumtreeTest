@@ -43,7 +43,7 @@ namespace Gumtree.Pages
 
             } catch (Exception ex)
             {
-                Console.WriteLine($"this button aint shit");
+                Console.WriteLine(ex.Message);
             }
         }
 

@@ -25,7 +25,7 @@ namespace Gumtree
         [TestCleanup]
         public void Cleanup()
         {
-            Thread.Sleep(5000);
+            Thread.Sleep(2000);
             driver.Quit();
         }
     }

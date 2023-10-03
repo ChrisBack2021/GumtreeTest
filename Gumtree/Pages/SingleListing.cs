@@ -25,27 +25,7 @@ namespace Gumtree.Pages
 
         public IWebElement MoreBtn => driver.FindElement(By.XPath("//div[@class='vip-ad-description']/button"));
 
-        public void ShowMoreBtn()
-        {
-            try
-            {
-                WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
-                var moreBtn = wait.Until(e =>
-                {
-                    var button = e.FindElement((By.XPath("//div[@class='vip-ad-description']/button")));
-                    return button;
-                });
 
-                IJavaScriptExecutor jse = (IJavaScriptExecutor)driver;
-                jse.ExecuteScript("arguments[0].scrollIntoView(true);", MoreBtn);
-                MoreBtn.Click();
-
-
-            } catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-        }
 
         public bool CheckMsg()
         {

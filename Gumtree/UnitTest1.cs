@@ -38,12 +38,10 @@ namespace Gumtree
 
             var singleItem = new SingleListing(driver);
             var checkTitle = singleItem.TitleCheck();
-            Assert.IsTrue(checkTitle, "Correct item has not been count");
+            Assert.IsTrue(checkTitle, "Correct item has not been found");
 
             var defaultMsg = singleItem.CheckMsg();
             Assert.IsTrue(defaultMsg, "Message box should not be null or empty");
-
-            singleItem.ShowMoreBtn();
         }
     }
 }
